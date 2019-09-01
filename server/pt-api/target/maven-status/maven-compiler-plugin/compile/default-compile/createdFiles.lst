@@ -1,0 +1,3 @@
+com\rsdtm\supermarket\api\bms\SupplierControllerApi.class
+com\rsdtm\supermarket\api\config\Swagger2Configuration.class
+com\rsdtm\supermarket\api\bms\ProductCategoryControllerApi.class

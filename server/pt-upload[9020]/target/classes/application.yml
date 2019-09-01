@@ -1,0 +1,27 @@
+server:
+  port: 9020
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 5MB # 限制文件上传的大小
+# Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9010/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+tx:
+  cos:
+    secret-id: AKIDIP8iZF25DAz0qfQo9IF5Yq11qTuKPgZN
+    secret-key: nRtC4h6MWVItIWTGrOkuseE8qMm02ua7
+    region-name: ap-chengdu
+    bucket-name: shop-1255976948
+    prefix-url: https://${tx.cos.bucket-name}.cos.ap-chengdu.myqcloud.com/
+    save-path: image
