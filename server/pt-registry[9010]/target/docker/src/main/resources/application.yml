@@ -1,7 +1,0 @@
-server:
-  port: 9010
-spring:
-  application:
-    name: pt-registry
-  profiles:
-    active: dev
